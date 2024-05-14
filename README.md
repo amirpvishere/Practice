@@ -1,0 +1,2 @@
+# Shop
+ toturial for django
