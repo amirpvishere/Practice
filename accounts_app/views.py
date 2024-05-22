@@ -1,19 +1,16 @@
-from django.shortcuts import render, HttpResponse
-
-# users = ["amir", 'fati', 'pedram', 'arash', 'reza', 'mahan']
-# blocked_users = ['reza', 'mahan']
+from django.shortcuts import render,HttpResponse
 
 
-def profile(request, username):
-    return render(request, "accounts_app/profile.html",)
-    # if username in users:
-    #     if username in blocked_users:
-    #         return HttpResponse(f'<h1>{username.capitalize()} is blocked.</h1>')
-    #     else:
-    #         return HttpResponse(f"<h1>This is {username.capitalize()}'s Page</h1>")
-    # else:
-    #     return HttpResponse("<h1>This Page is Not Found</h1>")
+
+# def userlist (request):
+#     return render(request, "accounts_app/userlist.html", context={"userlist": users})
+
+
+# def profile(request, username):
+#     for user in users:
+#         if user['username'] == username:
+#             return render(request, "accounts_app/profile.html", context={'user': user})       
 
 
 def info(requset):
-    return HttpResponse("<h1>This is info page</h1>")
+    return render(requset, "accounts_app/info.html",)
