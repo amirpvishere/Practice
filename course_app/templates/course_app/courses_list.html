@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>COURSES LIST:
+        </h1>
+        <hr>
+        {% for course in courses %}
+        <p>{{ course.title }} : {{ course.description }} - {{ course.availablity }} - {{ course.views }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+</body>
+</html>

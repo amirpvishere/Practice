@@ -1,15 +1,10 @@
 from django.shortcuts import render,HttpResponse
+from .models import Account
 
 
-
-# def userlist (request):
-#     return render(request, "accounts_app/userlist.html", context={"userlist": users})
-
-
-# def profile(request, username):
-#     for user in users:
-#         if user['username'] == username:
-#             return render(request, "accounts_app/profile.html", context={'user': user})       
+def userlist (request):
+    users = Account.objects.all()
+    return render(request, "accounts_app/userlist.html", context={"users": users})
 
 
 def info(requset):

@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     path("info", views.info),
     # path('<username>', views.profile),
-    # path("userlists", views.userlist),
+    path("  lists", views.userlist),
 ]
