@@ -5,4 +5,7 @@ def home(request):
 
 
 def contact_us(request):
+    fname = request.GET.get('fname')
+    lname = request.GET.get('lname')
+    age = request.GET.get('age')
     return render(request, "home_app/contact_us.html")
