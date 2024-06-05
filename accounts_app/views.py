@@ -20,4 +20,5 @@ def add_profile(request):
     if fname and lname and age and city and username:
         Account.objects.create(username=username, city=city, age=age, first_name=fname, last_name=lname)
         return redirect("accounts/list")
+    
     return render(request, "accounts_app/add_profile.html")
