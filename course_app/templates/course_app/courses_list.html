@@ -17,6 +17,7 @@
             <th scope="col">Views</th>
             <th scope="col">Availablity</th>
             <th scope="col">ID</th>
+            <th scope="col">Image</th>
           </tr>
         </thead>
         <tbody>
@@ -42,6 +43,7 @@
                   {% endif %}
                 </td>
                 <td>{{ course.id }}</td>
+                <td><img style="width: 40px; height: 30px;" src="{{ course.image.url }}" alt=""></td>
             </tr> 
             {% endfor %} 
         </tbody>

@@ -7,6 +7,7 @@ class Account(models.Model):
     last_name = models.CharField(max_length=32)
     age = models.IntegerField()
     city = models.CharField(max_length=15)
+    image = models.ImageField(null=True, upload_to="Accounts")
 
     def __str__(self):
         return self.username
