@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,8 +44,12 @@
                   {% endif %}
                 </td>
                 <td>{{ course.id }}</td>
+                {% if not course.image %}
+                <td><img style="width: 40px; height: 30px;" src="{% static "course_app/img/Default.jpg" %}" alt=""></td>
+                {% else %}
                 <td><img style="width: 40px; height: 30px;" src="{{ course.image.url }}" alt=""></td>
-            </tr> 
+                {% endif %}
+              </tr> 
             {% endfor %} 
         </tbody>
       </table>
