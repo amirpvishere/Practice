@@ -15,4 +15,3 @@ def ticket_list(request):
     tickets = Ticket.objects.all()
     return render(request, "ticket_app/ticket_list.html", context={"tickets": tickets})
 
-
